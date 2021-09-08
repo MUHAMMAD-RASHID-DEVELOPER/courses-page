@@ -7,7 +7,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
+import {Avatar} from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
@@ -61,17 +61,12 @@ const useStyles = makeStyles((theme) => ({
 
 
  export default function RecipeReviewCard() {
-  // const a = capturedSearch;
+  const [capturedSearch, setCapturedSearch ,courses,onChangeHandler,label] = UseBar();
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
   const handleExpandClick = () => {
     setExpanded(!expanded);
-
-
-
   };
-  const [setCapturedSearch ,capturedSearch, courses] = useState();
 // const a = capturedSearch && capturedSearch;
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>

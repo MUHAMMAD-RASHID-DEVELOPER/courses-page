@@ -1,24 +1,22 @@
-import { ViewArrayOutlined } from "@material-ui/icons";
+// import { ViewArrayOutlined } from "@material-ui/icons";
 import React from "react";
 import { useState } from "react";
 import Search from "search-react-input";
 import UseBar from "./UseBar"
-
-const courses = [
-  { label: "Web Development", value: "Web" },
-  { label: "Mobile Application Development", value: "Mobile" },
-  { label: "Software Development", value: "Software" },
-  { label: "Certified Computer Operator", value: "CCO" },
-  { label: "Graphic Designer", value: "Graphic" },
-  { label: "UI/UX Designer", value: "UI/UX" },
-  { label: "Mobile Repairing", value: "Mobile" },
-  { label: "Computer Hardware Repairing", value: "Computer" }
-];
+import Testing from "../../modules/Testing";
+// const courses = [
+//   { label: "Web Development", value: "Web" },
+//   { label: "Mobile Application Development", value: "Mobile" },
+//   { label: "Software Development", value: "Software" },
+//   { label: "Certified Computer Operator", value: "CCO" },
+//   { label: "Graphic Designer", value: "Graphic" },
+//   { label: "UI/UX Designer", value: "UI/UX" },
+//   { label: "Mobile Repairing", value: "Mobile" },
+//   { label: "Computer Hardware Repairing", value: "Computer" }
+// ];
 
 const Bar = () => {
-  const [capturedSearch, setCapturedSearch ,course] = useState(null);
-  // const [setCapturedSearch, capturedSearch] = useState();
-
+  const [capturedSearch, setCapturedSearch ,courses,onChangeHandler,label] = UseBar();
   return (
     <div className="App">
        
@@ -28,7 +26,7 @@ const Bar = () => {
       >
         <Search
           options={courses}
-          onChange={(option, e) => setCapturedSearch(option)}
+          onChange={(option) => onChangeHandler(option)}
         />
       </div>
       
@@ -45,7 +43,7 @@ const Bar = () => {
 </h1>
       </div>
 
-
+    <Testing label={label} />
     </div>
   );
 };
