@@ -1,8 +1,6 @@
-import React from "react";
 import { useState } from "react";
-import Bar from "./Bar"
 
-export default function UseBar(){
+export default function UseCoursePage(){
   const [capturedSearch,setCapturedSearch] = useState('');
   const[label,setLabel]=useState('');
   const courses = [
@@ -22,7 +20,7 @@ export default function UseBar(){
   }
 
 
-  return[capturedSearch, setCapturedSearch ,courses,onChangeHandler,label]
+  return[capturedSearch,courses,onChangeHandler,label]
 }
 
 

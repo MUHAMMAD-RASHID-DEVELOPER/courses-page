@@ -1,14 +1,9 @@
-import Course from "./components/coursePage/Course"
-import Bar from "./components/searchBar/Bar"
-import Logo from "./components/insertLogo/logo"
+import CoursePage from "./modules/coursePage/CoursePage";
 
 function App() {
   return (
  <div>
-  <Logo />
-
-   <Bar />
-   <Course />
+  <CoursePage />
  </div>
   );
 }
